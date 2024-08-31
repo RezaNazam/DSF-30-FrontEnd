@@ -1,0 +1,411 @@
+/* Global Styles */
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+}
+
+.container {
+  width: 90%;
+  margin: 0 auto;
+}
+
+/* Navbar Styles */
+.navbar {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #333;
+  color: #fff;
+  padding: 20px 1rem 10px;
+  position: fixed;
+  z-index: 9999;
+  top: 0;
+  width: 100%;
+  transition: background-color 0.3s ease;
+  transition: transform 0.3s ease; /* Pastikan ada transisi pada transform*/
+}
+
+/* transparent navbar */
+.navbar.transparent {
+  background-color: rgba(51, 51, 51, 0.5); /* Warna transparan saat di-scroll */
+}
+
+/* Navbar Hidden Styles */
+.navbar.hidden {
+  transform: translateY(-100%); /* Menggeser navbar ke atas sehingga tersembunyi */
+  transition: transform 0.5s ease; /* Transisi yang halus */
+}
+
+.navbar .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.navbar .logo {
+  font-size: 24px;
+  font-weight: bold;
+  text-decoration: none;
+  color: #fff;
+}
+
+.navbar .logo span {
+  color: #ff6f61;
+}
+
+.navbar .nav-links {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.navbar .nav-links li {
+  margin-left: 20px;
+  margin-right: 30px;
+}
+
+.navbar .nav-links a {
+  text-decoration: none;
+  color: #fff;
+  font-size: 18px;
+}
+
+.navbar .nav-links a:hover {
+  color: #ff6f61;
+}
+
+.hamburger {
+  display: none;
+  font-size: 24px; /* Sesuaikan ukuran hamburger untuk layar kecil */
+  cursor: pointer;
+  margin-right: 20px; /* Tambahkan jarak dari tepi kanan */
+  z-index: 101;
+}
+
+/* Sidebar Styles */
+.sidebar {
+  height: 100%;
+  width: 0;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-color: #111;
+  overflow-x: hidden;
+  transition: 0.5s;
+  padding-top: 60px;
+  z-index: 100;
+}
+
+.sidebar a {
+  padding: 10px 15px;
+  text-decoration: none;
+  font-size: 25px;
+  color: white;
+  display: block;
+  transition: 0.3s;
+}
+
+.sidebar a:hover {
+  background-color: #575757;
+}
+
+.sidebar .closebtn {
+  position: absolute;
+  top: 250px;
+  font-size: 36px;
+}
+
+/* Overlay Styles */
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5); /* Warna gelap transparan */
+  display: none; /* Tersembunyi secara default */
+  z-index: 50; /* Letakkan di bawah sidebar */
+}
+
+/* Hero Section Styles */
+.hero {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+  background-color: #000;
+}
+
+/* Hero Text Styles */
+.hero-text {
+  position: absolute;
+  bottom: 20px; /* Atur jarak dari atas */
+  left: 20px; /* Atur jarak dari kiri */
+  z-index: 2;
+  color: #fff;
+  font-size: 36px;
+  font-weight: bold;
+  text-align: center;
+  text-shadow: 4px 4px 8px rgba(0, 0, 0, 0.7); /* Tambahkan bayangan teks */
+}
+
+.slider {
+  position: relative;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.slide {
+  display: none;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+}
+
+.slide.active {
+  display: block;
+}
+
+.slide img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.slider-nav {
+  position: absolute;
+  top: 50%;
+  width: 90%;
+  display: flex;
+  justify-content: space-between;
+  transform: translateY(-50%);
+  color: #ff6f61;
+  font-size: 30px;
+  cursor: pointer;
+  padding: 0 10px;
+  z-index: 10;
+}
+
+.slider-nav span:hover {
+  color: #d3d3d3;
+}
+
+/* Movies Section Styles */
+.movies-section {
+  padding: 10px 0;
+  background-color: #f4f4f4;
+}
+
+.movies-section h2 {
+  text-align: center;
+  font-size: 2rem;
+  margin-bottom: 40px;
+  color: #333;
+}
+
+.movies-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+}
+
+.movie-card {
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  text-align: center;
+  transition: transform 0.3s ease;
+  margin-bottom: 20px;
+}
+
+.movie-card img {
+  width: 100%;
+  height: 300px;
+  object-fit: cover;
+}
+
+.movie-card h3 {
+  margin: 15px 0 10px;
+  font-size: 1.5rem;
+  color: #333;
+}
+
+.movie-card p {
+  margin-bottom: 15px;
+  color: #777;
+}
+
+.movie-card:hover {
+  transform: translateY(-10px);
+}
+
+/* Footer Styles */
+.footer {
+  background-color: #333;
+  color: white;
+  padding: 20px 0;
+  text-align: center;
+}
+
+.footer-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.footer-section {
+  flex: 1;
+  padding: 10px;
+}
+
+.footer-section h3 {
+  font-size: 18px;
+  margin-bottom: 10px;
+}
+
+.footer-section p {
+  font-size: 14px;
+  line-height: 1.6;
+}
+
+.footer-section ul {
+  list-style: none;
+  padding: 0;
+}
+
+.footer-section ul li {
+  margin-bottom: 10px;
+}
+
+.footer-section ul li a {
+  color: white;
+  text-decoration: none;
+}
+
+.footer-section ul li a:hover {
+  text-decoration: underline;
+}
+
+.footer-section .social-links a {
+  margin: 0 10px;
+  display: inline-block;
+  color: #f4f4f4;
+}
+
+.footer-section .social-links img {
+  width: 24px;
+  height: 24px;
+}
+
+.footer-bottom {
+  padding: 10px;
+  background-color: #222;
+  font-size: 14px;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+  .navbar .nav-links {
+    flex-direction: column;
+    align-items: center;
+    display: none;
+  }
+
+  .navbar .nav-links li {
+    margin: 10px 0;
+    display: none;
+  }
+
+  .hamburger {
+    display: block;
+  }
+
+  .sidebar {
+    width: 250px; /* Ukuran sidebar saat terbuka */
+  }
+
+  .hero-text {
+    font-size: 1.5rem; /* Ukuran teks lebih kecil */
+    bottom: 10px; /* Mengurangi jarak dari bawah */
+    left: 10px; /* Mengurangi jarak dari kiri */
+  }
+
+  .movies-section h2 {
+    font-size: 1.5rem; /* Ukuran font lebih kecil untuk heading pada layar menengah */
+  }
+
+  .movie-card img {
+    height: 150px; /* Ukuran gambar card-film untuk layar menengah */
+  }
+
+  .movie-card h3 {
+    font-size: 1.2rem; /* Ukuran font lebih kecil untuk judul card-film */
+  }
+}
+
+/* untuk layar kecil */
+@media screen and (max-width: 480px) {
+  .hero-text {
+    font-size: 1.2rem; /* Ukuran font lebih kecil pada layar kecil */
+    bottom: 5px;
+    left: 5px;
+  }
+
+  .movies-section h2 {
+    font-size: 1.2rem; /* Ukuran font lebih kecil untuk heading pada layar kecil */
+  }
+
+  .movie-card img {
+    height: 120px; /* Ukuran gambar card-film untuk layar kecil */
+  }
+
+  .movie-card h3 {
+    font-size: 1rem; /* Ukuran font lebih kecil untuk judul card-film */
+  }
+
+  .hamburger {
+    font-size: 24px; /* Ukuran font hamburger menu diatur lebih kecil */
+    margin-right: 10px; /* Tambahkan margin untuk menjauhkan dari tepi kanan */
+  }
+
+  .sidebar {
+    width: 150px; /* Ukuran sidebar saat terbuka */
+  }
+
+  .sidebar a {
+    font-size: 20px; /* Ukuran teks sidebar lebih kecil */
+  }
+
+  .sidebar .closebtn {
+    top: 230px;
+    font-size: 28px; /* Ukuran tombol tutup lebih kecil */
+  }
+
+  .navbar {
+    padding: 15px 1rem; /* Kurangi padding pada navbar */
+  }
+}
+
+/* Responsive Footer */
+@media screen and (max-width: 768px) {
+  .footer-content {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .footer-section {
+    padding: 20px 0;
+  }
+}

@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Cinema Website</title>
+    <link rel="stylesheet" href="style.css" />
+    <script src="https://unpkg.com/feather-icons"></script>
+  </head>
+  <body>
+    <!-- Navbar -->
+    <nav class="navbar">
+      <div class="container">
+        <a href="#" class="logo">Cine<span>Verse</span></a>
+        <div class="hamburger" onclick="toggleSidebar()">
+          &#9776;
+          <!-- Ini adalah simbol hamburger -->
+        </div>
+        <ul class="nav-links">
+          <li><a href="#hero">Home</a></li>
+          <li><a href="#movie">Movies</a></li>
+          <li><a href="#footer">About</a></li>
+          <li><a href="#footer">Contact</a></li>
+        </ul>
+      </div>
+    </nav>
+
+    <!-- Sidebar -->
+    <div id="sidebar" class="sidebar">
+      <a href="#hero">Home</a>
+      <a href="#movie">Movies</a>
+      <a href="#footer">About</a>
+      <a href="#footer">Contact</a>
+      <a href="javascript:void(0)" class="closebtn" onclick="toggleSidebar()">&times;</a>
+    </div>
+
+    <!-- Overlay -->
+    <div id="overlay" class="overlay" onclick="toggleSidebar()"></div>
+
+    <!-- Content Section -->
+    <!-- Hero content will go here -->
+    <!-- Hero Section -->
+    <div class="hero" id="hero">
+      <div class="hero-text">
+        <h1>Popular Films</h1>
+      </div>
+      <div class="slider">
+        <div class="slide active">
+          <img src="img/Interstellar Wallpaper.jpg" alt="Film 1" />
+        </div>
+        <div class="slide">
+          <img src="img/kimetsu.jpg" alt="Film 2" />
+        </div>
+        <div class="slide">
+          <img src="img/inception.jpg" alt="Film 3" />
+        </div>
+        <div class="slider-nav">
+          <span class="prev">&#10094;</span>
+          <span class="next">&#10095;</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="movies-section" id="movie">
+      <!-- Movie cards will go here -->
+      <!-- Movies Section -->
+      <div class="movies-section">
+        <div class="container">
+          <h2>Film Terbaru</h2>
+          <div class="movies-grid">
+            <div class="movie-card">
+              <img src="img/deadpoolxwolverine.webp" alt="Film 1" />
+              <h3>Deadpop x Wolverime</h3>
+              <p>Genre: Action</p>
+            </div>
+            <div class="movie-card">
+              <img src="img/despicable-me-4.webp" alt="Film 2" />
+              <h3>Despicable ME 4</h3>
+              <p>Genre: Animation, Action</p>
+            </div>
+            <div class="movie-card">
+              <img src="img/inside-out-2.webp" alt="Film 3" />
+              <h3>Inside Out 2</h3>
+              <p>Genre: Animation, Comedy</p>
+            </div>
+            <div class="movie-card">
+              <img src="img/AlienRomulus.webp" alt="Film 4" />
+              <h3>Alien:Romulus</h3>
+              <p>Genre: Horor, Sci-Fi</p>
+            </div>
+            <div class="movie-card">
+              <img src="img/Spongebob.webp" alt="Film 5" />
+              <h3>Saving Bikini Bottom: The Sandy Cheeks Movie (2024)</h3>
+              <p>Genre: Comedy, Adventure</p>
+            </div>
+            <div class="movie-card">
+              <img src="img/Gunner.jpg" alt="Film 6" />
+              <h3>Gunner (2024)</h3>
+              <p>Genre: Action, Thriller</p>
+            </div>
+            <div class="movie-card">
+              <img src="img/BadBoys.jpg" alt="Film 7" />
+              <h3>Bad Boys: Ride or Die</h3>
+              <p>Genre: Sci-Fi</p>
+            </div>
+            <div class="movie-card">
+              <img src="img/Interstellar Poster.jpg" alt="Film 8" />
+              <h3>Interstellar</h3>
+              <p>Genre: Sci-Fi, Adventure, mystery</p>
+            </div>
+            <div class="movie-card">
+              <img src="img/inception poster.jpg" alt="Film 9" />
+              <h3>Inception</h3>
+              <p>Genre: Adventure, Sci-Fi, Thriller</p>
+            </div>
+            <div class="movie-card">
+              <img src="img/Kimetsu no yaiba.jpg" alt="Film 10" />
+              <h3>Kimetsu no Yaiba: Season 3</h3>
+              <p>Genre: Adventure, fantasy</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Footer -->
+    <!-- Footer -->
+    <footer id="footer" class="footer">
+      <div class="footer-content">
+        <div class="footer-section about">
+          <h3>About Me</h3>
+          <p>
+            Hi, I'm Nazam Ahmad Fahreyza, a passionate cinephile and the creator of CineVerse. I'm currently a student at SMKN 1 Karawang, majoring in Software Engineering. Movies have always been my escape and inspiration, and through
+            CineVerse, I aim to share this passion with others. Join me as we explore the fascinating world of cinema together!
+          </p>
+        </div>
+        <div class="footer-section links">
+          <h3>Contact Me</h3>
+          <p>rezanazam63@gmail.com</p>
+        </div>
+        <div class="footer-section social">
+          <h3>Follow Us</h3>
+          <div class="social-links">
+            <a href="https://github.com/RezaNazam"><i data-feather="github"></i></a>
+            <a href="https://www.instagram.com/rxyznnn?igsh=MXQya2Y1Mmd4cm1hYQ=="><i data-feather="instagram"></i></a>
+            <a href="https://www.linkedin.com/in/nazam-ahmad-fahreyza-a748212aa?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app"><i data-feather="linkedin"></i></a>
+          </div>
+        </div>
+      </div>
+      <div class="footer-bottom">&copy; 2024 CineVerse | All Rights Reserved</div>
+    </footer>
+
+    <!-- Javascript -->
+    <script src="main.js"></script>
+
+    <!-- Fetaher icons -->
+    <script>
+      feather.replace();
+    </script>
+  </body>
+</html>
